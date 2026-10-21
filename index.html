@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101112" />
+    <meta
+      name="description"
+      content="RSMotor，把电摩的控制器、保护板、散热风扇、充电器、取电器和胎压监测装进一个 App。打开即连，自动统计里程，记录每次骑行、充电与消费。"
+    />
+    <meta property="og:title" content="RSMotor · 一辆车，一个 App" />
+    <meta
+      property="og:description"
+      content="连接你的电摩，释放骑行的纯粹。六类外设，All in one。"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/webp" href="./app-icon.webp" />
+    <title>RSMotor · 一辆车，一个 App</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header">
+      <nav class="container nav" aria-label="主导航">
+        <a class="brand" href="#" aria-label="RSMotor 首页"
+          ><img src="./app-icon.webp" alt="" width="36" height="36" /><span
+            >RS<span class="brand-light">Motor</span></span
+          ></a
+        >
+        <div class="nav-links">
+          <a href="#devices">设备互联</a><a href="#experience">骑行体验</a
+          ><a href="#records">每程有迹</a><a href="#faq">常见问题</a>
+        </div>
+        <a class="nav-download" href="#download"
+          >下载 App <i data-lucide="arrow-up-right"></i
+        ></a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span> 为热爱骑行的你而造
+            <span class="eyebrow-line"></span>
+          </div>
+          <h1 id="hero-title">
+            一辆车，<br />一个
+            <span class="orange">App<span class="period">.</span></span>
+          </h1>
+          <p class="hero-lead">连接所有。<span>专注骑行。</span></p>
+          <p class="hero-description">
+            从控制器到胎压监测，让电摩设备尽在掌握。<br
+              class="desktop-break"
+            />告别多个小程序来回切换，打开 RSMotor，即刻出发。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#download"
+              ><i data-lucide="download"></i> 获取 Android 版
+              <i data-lucide="arrow-up-right"></i></a
+            ><a class="text-link" href="#devices"
+              >探索全部功能 <i data-lucide="arrow-down"></i
+            ></a>
+          </div>
+          <div class="hero-specs">
+            <span><i data-lucide="bluetooth"></i> 多设备互联</span
+            ><span><i data-lucide="radio"></i> 靠近即唤醒</span
+            ><span><i data-lucide="route"></i> 自动记里程</span>
+          </div>
+        </div>
+        <div
+          class="hero-visual"
+          aria-label="RSMotor 设备联动概念演示，所有数值均为示意"
+        >
+          <span class="visual-coordinate">CONNECTED ECOSYSTEM / 01</span>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="crosshair crosshair-one">+</div>
+          <div class="crosshair crosshair-two">+</div>
+          <div class="connection-line connection-line-one"></div>
+          <div class="connection-line connection-line-two"></div>
+          <div class="floating-device controller-float">
+            <span class="device-icon"><i data-lucide="cpu"></i></span>
+            <div>
+              <span class="micro-label">CONTROLLER</span><strong>控制器</strong>
+            </div>
+            <span class="status-dot"></span>
+          </div>
+          <div class="floating-device battery-float">
+            <span class="device-icon"
+              ><i data-lucide="battery-charging"></i
+            ></span>
+            <div>
+              <span class="micro-label">BATTERY SYSTEM</span
+              ><strong>电池保护板</strong>
+            </div>
+            <span class="status-dot"></span>
+          </div>
+          <div class="phone">
+            <div class="phone-speaker"></div>
+            <div class="phone-top">
+              <span>09:41</span>
+              <div>
+                <i data-lucide="signal"></i><i data-lucide="battery-full"></i>
+              </div>
+            </div>
+            <div class="phone-heading">
+              <div>
+                <span class="micro-label">MY GARAGE</span
+                ><strong>我的电摩 <i data-lucide="chevron-down"></i></strong>
+              </div>
+              <i data-lucide="settings-2"></i>
+            </div>
+            <div class="phone-status">
+              <span class="status-dot"></span> 设备已连接
+              <span>READY TO RIDE</span>
+            </div>
+            <div class="speedometer">
+              <div class="gauge-ticks"></div>
+              <svg viewBox="0 0 240 200" aria-hidden="true">
+                <path class="gauge-track" d="M 42 168 A 98 98 0 1 1 198 168" />
+                <path
+                  class="gauge-progress"
+                  d="M 42 168 A 98 98 0 1 1 198 168"
+                />
+              </svg>
+              <div class="speed-number">48<span>km/h</span></div>
+              <span class="gauge-zero">0</span
+              ><span class="gauge-max">120</span>
+            </div>
+            <div class="phone-stats">
+              <div>
+                <span>电池电量</span><strong>86<small>%</small></strong>
+                <div class="tiny-battery"><b></b></div>
+              </div>
+              <div>
+                <span>本次里程</span><strong>24.8<small>km</small></strong
+                ><span class="stat-hint">每一程，都算数</span>
+              </div>
+            </div>
+            <div class="phone-devices">
+              <span><i data-lucide="cpu"></i> 控制器 <b>已连接</b></span
+              ><span><i data-lucide="battery"></i> 保护板 <b>已连接</b></span
+              ><span><i data-lucide="fan"></i> 散热风扇 <b>已连接</b></span>
+            </div>
+            <div class="phone-tabs">
+              <span class="active"
+                ><i data-lucide="layout-dashboard"></i>仪表</span
+              ><span><i data-lucide="route"></i>骑行</span
+              ><span><i data-lucide="trophy"></i>榜单</span
+              ><span><i data-lucide="user-round"></i>我的</span>
+            </div>
+            <div class="phone-home"></div>
+          </div>
+          <div class="floating-metric">
+            <i data-lucide="activity"></i
+            ><span>让每次骑行<br /><strong>都有迹可循。</strong></span
+            ><svg viewBox="0 0 86 35" aria-hidden="true">
+              <path d="M0 28 12 28 23 9 33 19 42 4 51 18 64 12 75 17 86 2" />
+            </svg>
+          </div>
+          <span class="visual-caption">界面概念演示 · 数值为示意</span>
+        </div>
+        <div class="hero-bottom">
+          <span>LESS SWITCHING. MORE RIDING.</span
+          ><a href="#devices" aria-label="向下探索"
+            ><i data-lucide="arrow-down"></i></a
+          ><span>DESIGNED FOR YOUR ELECTRIC RIDE</span>
+        </div>
+      </section>
+      <div class="compatibility-band">
+        <div class="container">
+          <span class="band-label"
+            >为你的设备<br /><strong>找到共同语言</strong></span
+          ><span>APT <small>新 / 老款</small></span
+          ><span>凌博 <small>LINGBO</small></span
+          ><span>智科 <small>ZHIKO</small></span
+          ><span>主流保护板</span><span>蓝宝计量器</span
+          ><a href="#devices" aria-label="查看支持设备"
+            ><i data-lucide="arrow-up-right"></i
+          ></a>
+        </div>
+      </div>
+      <section
+        class="section container"
+        id="devices"
+        aria-labelledby="devices-title"
+      >
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow section-eyebrow">01 / ALL IN ONE</p>
+            <h2 id="devices-title">
+              设备各有不同。<br /><span class="muted">体验，从此统一。</span>
+            </h2>
+          </div>
+          <p>六类外设，一个入口。<br />把零散的设备，连接成完整的骑行体验。</p>
+        </div>
+        <div class="device-explorer reveal">
+          <div class="device-selector" role="group" aria-label="选择外设类型">
+            <button
+              class="device-option active"
+              aria-pressed="true"
+              data-device="controller"
+            >
+              <i data-lucide="cpu"></i
+              ><span>控制器<small>CONTROLLER</small></span
+              ><i data-lucide="arrow-up-right"></i>
+            </button>
+            <button
+              class="device-option"
+              aria-pressed="false"
+              data-device="battery"
+            >
+              <i data-lucide="battery-charging"></i
+              ><span>保护板 / 计量器<small>BATTERY SYSTEM</small></span
+              ><i data-lucide="arrow-up-right"></i>
+            </button>
+            <button
+              class="device-option"
+              aria-pressed="false"
+              data-device="fan"
+            >
+              <i data-lucide="fan"></i
+              ><span>散热风扇<small>COOLING FAN</small></span
+              ><i data-lucide="arrow-up-right"></i>
+            </button>
+            <button
+              class="device-option"
+              aria-pressed="false"
+              data-device="charger"
+            >
+              <i data-lucide="plug-zap"></i
+              ><span>充电器<small>CHARGER</small></span
+              ><i data-lucide="arrow-up-right"></i>
+            </button>
+            <button
+              class="device-option"
+              aria-pressed="false"
+              data-device="power"
+            >
+              <i data-lucide="cable"></i
+              ><span>取电器<small>POWER ACCESSORY</small></span
+              ><i data-lucide="arrow-up-right"></i>
+            </button>
+            <button
+              class="device-option"
+              aria-pressed="false"
+              data-device="tpms"
+            >
+              <i data-lucide="gauge"></i><span>胎压监测<small>TPMS</small></span
+              ><i data-lucide="arrow-up-right"></i>
+            </button>
+          </div>
+          <div class="device-detail" aria-live="polite" aria-atomic="true">
+            <div class="detail-top">
+              <span class="micro-label" id="device-category"
+                >POWER & CONTROL</span
+              ><span class="detail-index" id="device-index">01 / 06</span>
+            </div>
+            <div class="device-symbol">
+              <div class="symbol-ring"></div>
+              <i data-lucide="cpu" id="device-symbol-icon"></i
+              ><span class="symbol-label">RSMotor LINK</span>
+            </div>
+            <div class="detail-copy">
+              <h3 id="device-title">读懂动力，尽在一屏。</h3>
+              <p id="device-description">
+                连接控制器，集中查看车辆运行数据。熟悉的设备，统一的操作体验。
+              </p>
+              <div class="device-tags" id="device-tags">
+                <span>新款 APT</span><span>老款 APT</span><span>凌博</span
+                ><span>智科</span>
+              </div>
+            </div>
+            <p class="compatibility-note">
+              具体支持情况以 App 内的协议与设备型号为准。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="experience-section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="container experience-grid">
+          <div class="wake-visual reveal" aria-hidden="true">
+            <div class="radar radar-outer"></div>
+            <div class="radar radar-middle"></div>
+            <div class="radar radar-inner"></div>
+            <div class="radar-sweep"></div>
+            <div class="radar-center"><i data-lucide="bluetooth"></i></div>
+            <div class="radar-node node-phone">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <div class="radar-node node-bike"><i data-lucide="bike"></i></div>
+            <span class="radar-tag"
+              ><span class="status-dot"></span> 连接，让出发更从容</span
+            ><span class="radar-label">PROXIMITY / AUTO CONNECT</span>
+          </div>
+          <div class="experience-copy reveal">
+            <p class="eyebrow section-eyebrow">02 / READY WHEN YOU ARE</p>
+            <h2 id="experience-title">你靠近。<br />它就准备好了。</h2>
+            <p class="body-copy">
+              靠近车辆，自动唤醒并连接设备。<br />打开
+              App，熟悉的数据已经就位。<br />把时间留给路上的风。
+            </p>
+            <div class="connection-steps">
+              <span><b>01</b> 绑定设备</span><i data-lucide="chevron-right"></i
+              ><span><b>02</b> 靠近车辆</span><i data-lucide="chevron-right"></i
+              ><span><b>03</b> 自动连接</span>
+            </div>
+            <p class="feature-note">
+              需先完成设备绑定及自动唤醒设置，并授予蓝牙、附近设备等所需权限；后台连接受手机系统设置影响。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section container"
+        id="records"
+        aria-labelledby="records-title"
+      >
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow section-eyebrow">03 / EVERY RIDE COUNTS</p>
+            <h2 id="records-title">
+              不止当下。<br /><span class="muted">每一程，都算数。</span>
+            </h2>
+          </div>
+          <p>
+            从出发到充电，从里程到花费。<br />简洁清爽的界面，装下完整的用车日常。
+          </p>
+        </div>
+        <div class="records-grid">
+          <article class="record-card ride-card reveal">
+            <div class="card-kicker">
+              <i data-lucide="route"></i><span>骑行记录 / RIDE LOG</span
+              ><i data-lucide="arrow-up-right"></i>
+            </div>
+            <h3>路过的风景，<br />和里程一起留下。</h3>
+            <p>
+              查看骑行记录，自动统计里程。<br />回看每次出发，了解自己的骑行日常。
+            </p>
+            <div class="route-art" aria-hidden="true">
+              <svg viewBox="0 0 580 260">
+                <defs>
+                  <pattern
+                    id="map-grid"
+                    width="54"
+                    height="54"
+                    patternUnits="userSpaceOnUse"
+                    patternTransform="rotate(-20)"
+                  >
+                    <path
+                      d="M54 0H0V54"
+                      fill="none"
+                      stroke="#333637"
+                      stroke-width="1"
+                    />
+                  </pattern>
+                </defs>
+                <rect width="580" height="260" fill="url(#map-grid)" />
+                <path
+                  class="map-street"
+                  d="M-20 140 145 80 320 145 590 58M100 280 170 188 245 172 395 -20M-20 228 185 217 420 254 600 160"
+                />
+                <path
+                  class="ride-route-back"
+                  d="M107 193 162 178 199 115 288 142 350 72 431 92 473 47"
+                />
+                <path
+                  class="ride-route"
+                  d="M107 193 162 178 199 115 288 142 350 72 431 92 473 47"
+                />
+                <circle cx="107" cy="193" r="7" fill="#f4f2ed" />
+                <circle cx="473" cy="47" r="9" fill="#ff6b2b" /></svg
+              ><span class="map-label map-start">START</span
+              ><span class="map-label map-finish">每一程，自有轨迹</span>
+            </div>
+            <div class="ride-summary">
+              <span>自动统计<strong>里程，有数。</strong></span
+              ><span class="micro-label">RIDE. RECORD. REPEAT.</span>
+            </div>
+          </article>
+          <div class="small-records">
+            <article class="record-card charge-card reveal">
+              <div class="card-kicker">
+                <i data-lucide="battery-charging"></i
+                ><span>充电记录 / CHARGING</span>
+              </div>
+              <h3>每次满电，心中有底。</h3>
+              <p>把充电记录集中收好，用电日常随时回看。</p>
+              <div class="charge-bars" aria-hidden="true">
+                <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b
+                ><b></b><b></b><b></b><i data-lucide="zap"></i>
+              </div>
+            </article>
+            <article class="record-card expense-card reveal">
+              <div class="card-kicker">
+                <i data-lucide="wallet"></i><span>消费记录 / EXPENSES</span>
+              </div>
+              <h3>热爱，也可以明明白白。</h3>
+              <p>记录用车消费，让每一笔投入都有去处。</p>
+              <div class="expense-line">
+                <span><i data-lucide="receipt-text"></i> 用车账本</span
+                ><span>每一笔，都记得 <i data-lucide="check"></i></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        class="leaderboard-section container reveal"
+        aria-labelledby="leaderboard-title"
+      >
+        <div class="leaderboard-intro">
+          <p class="eyebrow section-eyebrow">04 / FIND YOUR PERSONAL BEST</p>
+          <h2 id="leaderboard-title">快，有实力。<br />省，也有一手。</h2>
+          <p>
+            加速与省电，两种热爱的表达。<br />用数据认识爱车，找到属于你的进阶。
+          </p>
+        </div>
+        <div class="leaderboard-options">
+          <article>
+            <span class="rank-number">01</span><i data-lucide="timer"></i>
+            <div>
+              <h3>加速榜单</h3>
+              <p>记录加速表现，见证每次突破。</p>
+            </div>
+            <span class="rank-label">PERFORMANCE</span>
+          </article>
+          <article>
+            <span class="rank-number">02</span><i data-lucide="leaf"></i>
+            <div>
+              <h3>省电榜单</h3>
+              <p>关注能耗表现，探索更远的可能。</p>
+            </div>
+            <span class="rank-label">EFFICIENCY</span>
+          </article>
+          <p class="feature-note">
+            请在合法、安全的封闭场地进行加速测试，遵守当地交通法规。
+          </p>
+        </div>
+      </section>
+      <section
+        class="section container faq-section"
+        id="faq"
+        aria-labelledby="faq-title"
+      >
+        <div class="reveal">
+          <p class="eyebrow section-eyebrow">BEFORE YOU RIDE</p>
+          <h2 id="faq-title">
+            出发前，<br /><span class="muted">你可能想知道。</span>
+          </h2>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>
+              我的设备能用 RSMotor 吗？<i data-lucide="plus"></i>
+            </summary>
+            <p>
+              RSMotor
+              支持控制器、保护板、散热风扇、充电器、取电器和胎压监测。控制器支持新老
+              APT、凌博、智科；电池侧支持主流保护板及蓝宝计量器。不同型号、固件与蓝牙协议可能有差异，请以
+              App 内实际支持的设备与协议为准。
+            </p>
+          </details>
+          <details>
+            <summary>
+              靠近自动连接，需要怎样设置？<i data-lucide="plus"></i>
+            </summary>
+            <p>
+              先在 App
+              中绑定车辆和设备，完成自动唤醒设置，保持蓝牙开启并授予所需权限。根据手机系统，可能还需要允许后台运行、自启动或调整电池优化设置。设备需处于可连接状态，实际唤醒效果取决于车辆及手机系统。
+            </p>
+          </details>
+          <details>
+            <summary>
+              支持哪些手机？怎么安装？<i data-lucide="plus"></i>
+            </summary>
+            <p>
+              当前提供 Android 安装包，要求 Android 8.0 或以上及 arm64-v8a
+              架构。下载 APK
+              后按系统提示允许浏览器安装此应用即可。若在微信等内置浏览器中无法下载，请选择“在浏览器中打开”。当前没有
+              iOS 版本。
+            </p>
+          </details>
+          <details>
+            <summary>
+              下载后能直接连接所有外设吗？<i data-lucide="plus"></i>
+            </summary>
+            <p>
+              首次使用需要选择匹配的协议并完成设备绑定。之后可在一个 App
+              中查看和管理已支持的设备，无需来回切换多个小程序。具体功能随设备型号与
+              App 版本有所不同。
+            </p>
+          </details>
+        </div>
+      </section>
+      <section
+        class="download-section"
+        id="download"
+        aria-labelledby="download-title"
+      >
+        <div class="container download-inner">
+          <div class="download-copy">
+            <p class="eyebrow">YOUR NEXT RIDE STARTS HERE</p>
+            <h2 id="download-title">下一程，<br />轻装上阵。</h2>
+            <p>让 RSMotor 接管连接，把自由留给你。</p>
+            <div class="download-actions">
+              <a
+                id="apk-download"
+                class="button button-dark"
+                href="https://rsmotor-9gtq93sed5fb9acd.service.tcloudbase.com/app-update-release?action=download&amp;channel=release"
+                ><i data-lucide="download"></i> 下载 Android 版
+                <i data-lucide="arrow-up-right"></i></a
+              ><button
+                id="qr-open"
+                class="button button-outline"
+                aria-haspopup="dialog"
+              >
+                <i data-lucide="qr-code"></i> 手机扫码
+              </button>
+            </div>
+            <p class="release-status" id="release-status" role="status">
+              Android 8.0+ · arm64-v8a · 正式版 APK
+            </p>
+            <p class="download-hint">微信内无法下载？请在系统浏览器中打开。</p>
+            <noscript
+              ><p>
+                下载按钮可直接获取正式版 APK。扫码功能需要启用 JavaScript。
+              </p></noscript
+            >
+          </div>
+          <div class="download-art" aria-hidden="true">
+            <span class="download-monogram">RS</span>
+            <div class="download-art-line"></div>
+            <span class="download-art-caption"
+              >ONE APP.<br />ALL CONNECTED.</span
+            ><i data-lucide="arrow-up-right"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="container footer">
+      <a class="brand" href="#"
+        ><img src="./app-icon.webp" alt="" width="30" height="30" /><span
+          >RS<span class="brand-light">Motor</span></span
+        ></a
+      ><span>为每一次出发，连接更多可能。</span
+      ><span>© <span id="year">2026</span> RSMotor</span
+      ><a href="#main" class="back-top"
+        >回到顶部 <i data-lucide="arrow-up-right"></i
+      ></a>
+    </footer>
+    <dialog id="qr-dialog" aria-labelledby="qr-title">
+      <button class="dialog-close" aria-label="关闭扫码窗口">
+        <i data-lucide="x"></i>
+      </button>
+      <p class="eyebrow section-eyebrow">TAKE IT FOR A RIDE</p>
+      <h2 id="qr-title">在手机上打开</h2>
+      <p>使用 Android 手机相机扫码，<br />打开此页面并下载安装包。</p>
+      <canvas
+        id="qr-canvas"
+        aria-label="本页下载区的二维码"
+        role="img"
+      ></canvas>
+      <p id="qr-status">Android 8.0+ · arm64-v8a</p>
+    </dialog>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
