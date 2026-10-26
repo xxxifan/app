@@ -34,6 +34,12 @@ import {
   Plus,
   QrCode,
   X,
+  Sparkles,
+  BatteryMedium,
+  ChartSpline,
+  Navigation,
+  Volume2,
+  CornerUpRight,
 } from "lucide";
 import QRCode from "qrcode";
 
@@ -71,6 +77,12 @@ const icons = {
   Plus,
   QrCode,
   X,
+  Sparkles,
+  BatteryMedium,
+  ChartSpline,
+  Navigation,
+  Volume2,
+  CornerUpRight,
 };
 const renderIcons = () =>
   createIcons({ icons, attrs: { "aria-hidden": "true" } });
@@ -78,58 +90,56 @@ renderIcons();
 
 const devices = {
   controller: {
-    category: "POWER & CONTROL",
+    category: "动力",
     index: "01",
     icon: "cpu",
-    title: "读懂动力，尽在一屏。",
+    title: "车速、电流、温度，实时看",
     description:
-      "连接控制器，集中查看车辆运行数据。熟悉的设备，统一的操作体验。",
-    tags: ["新款 APT", "老款 APT", "凌博", "智科"],
+      "读取控制器的运行数据和故障信息，部分型号可以查看和调整参数，修改前会有风险提示。",
+    tags: ["主流控制器", "更多适配中"],
   },
   battery: {
-    category: "BATTERY & ENERGY",
+    category: "电池",
     index: "02",
     icon: "battery-charging",
-    title: "电池状态，心里有数。",
+    title: "电压、电流、每串电芯",
     description:
-      "连接主流保护板及蓝宝计量器，集中查看电池信息，让每次出发更从容。",
-    tags: ["主流保护板", "蓝宝计量器", "电池信息"],
+      "连接主流保护板或计量器，查看电量、总压和电流；保护板还能看到单体电压和压差。",
+    tags: ["主流保护板", "计量器", "单体电压"],
   },
   fan: {
-    category: "COOLING & COMFORT",
+    category: "散热",
     index: "03",
     icon: "fan",
-    title: "散热，也在掌握之中。",
-    description:
-      "把支持的散热风扇接入 RSMotor，在同一个 App 中查看和管理散热设备。",
-    tags: ["散热风扇", "统一管理"],
+    title: "散热风扇状态",
+    description: "接入支持的散热风扇，和其他设备放在同一个 App 里查看和管理。",
+    tags: ["散热风扇"],
   },
   charger: {
-    category: "CHARGE & GO",
+    category: "补能",
     index: "04",
     icon: "plug-zap",
-    title: "从满电，到下一次出发。",
+    title: "充电状态和充电记录",
     description:
-      "连接支持的充电器，查看充电状态与充电记录，让补能也融入日常骑行。",
-    tags: ["充电器连接", "充电状态", "充电记录"],
+      "连接支持的充电器，查看充电状态，部分型号可以调整充电参数，每次充电都会留下记录。",
+    tags: ["充电状态", "充电参数", "充电记录"],
   },
   power: {
-    category: "POWER YOUR ACCESSORIES",
+    category: "配件",
     index: "05",
     icon: "cable",
-    title: "配件虽小，也不必切换。",
+    title: "取电器也能接入",
     description:
-      "取电器同样可以接入。把支持的用电配件放在一起管理，让操作更集中。",
-    tags: ["取电器", "配件互联"],
+      "支持的取电器可以绑定到车辆上，和其他设备一起查看，不用另装 App。",
+    tags: ["取电器"],
   },
   tpms: {
-    category: "PRESSURE & CONFIDENCE",
+    category: "轮胎",
     index: "06",
     icon: "gauge",
-    title: "轮下的状态，抬眼就懂。",
-    description:
-      "接入支持的胎压监测设备，查看轮胎状态，把容易忽略的细节也照顾到。",
-    tags: ["胎压监测", "轮胎状态"],
+    title: "前后轮胎压",
+    description: "接入支持的胎压传感器，骑行时在 App 里直接看胎压。",
+    tags: ["胎压监测"],
   },
 };
 
@@ -142,8 +152,7 @@ document.querySelectorAll("[data-device]").forEach((button) => {
       item.setAttribute("aria-pressed", String(active));
     });
     document.querySelector("#device-category").textContent = device.category;
-    document.querySelector("#device-index").textContent =
-      `${device.index} / 06`;
+    document.querySelector("#device-index").textContent = device.index;
     document.querySelector("#device-title").textContent = device.title;
     document.querySelector("#device-description").textContent =
       device.description;
